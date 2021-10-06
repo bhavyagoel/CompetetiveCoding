@@ -1,0 +1,1 @@
+{"name":"Local: main","url":"/home/bhavyagoel/dev/GitHubProj/DSA-CP/MAX_DIFF-the-two-dishes/main.cpp","tests":[{"id":1631718014550,"input":"3\n3 1\n4 4\n2 3\n","output":"1\n4\n1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bhavyagoel/dev/GitHubProj/DSA-CP/MAX_DIFF-the-two-dishes/main.cpp","group":"local","local":true}
