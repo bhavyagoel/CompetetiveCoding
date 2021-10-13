@@ -1,0 +1,1 @@
+{"name":"Local: selection_sort","url":"/home/bhavyagoel/dev/GitHubProj/DSA-CP/C++InterviewPrep/arrays/selection_sort.cpp","tests":[{"id":1634157144619,"input":"7\n5 3 7 3 78 56 12","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bhavyagoel/dev/GitHubProj/DSA-CP/C++InterviewPrep/arrays/selection_sort.cpp","group":"local","local":true}

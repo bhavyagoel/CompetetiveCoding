@@ -1,16 +1,18 @@
 #include <iostream>
-#include<list> 
-using namespace std; 
-
+#include <list>
+using namespace std;
 
 /*
 * Templates + Interators + Comparators
 ? Comparator: For user defined datatypes
 */
-template<class ForwardIterator, class T, class Compare>
-ForwardIterator search(ForwardIterator start, ForwardIterator end, T key, Compare cmp){
-   while(start!=end) {
-      if(cmp(*start, key)){
+template <class ForwardIterator, class T, class Compare>
+ForwardIterator search(ForwardIterator start, ForwardIterator end, T key, Compare cmp)
+{
+   while (start != end)
+   {
+      if (cmp(*start, key))
+      {
          return start;
       }
       start++;
@@ -18,44 +20,47 @@ ForwardIterator search(ForwardIterator start, ForwardIterator end, T key, Compar
    return end;
 }
 
+class Book
+{
+public:
+   string name;
+   int price;
 
-
-
-class Book{
-   public:
-      string name;
-      int price; 
-
-   Book(){
-
+   Book()
+   {
    }
 
-   Book(string name, int price){
-      this->name = name; 
+   Book(string name, int price)
+   {
+      this->name = name;
       this->price = price;
    }
 };
 
-class bookToCompare{
-   public:
+class bookToCompare
+{
+public:
    // Functor/ Function obj: here () is overloaded
-   bool operator()(Book A, Book B) {
-      cout<<"Inside Compare fn \n";
-      if(A.name == B.name){
+   bool operator()(Book A, Book B)
+   {
+      cout << "Inside Compare fn \n";
+      if (A.name == B.name)
+      {
          return true;
       }
       return false;
    }
 };
 
-int main() {
+int main()
+{
 
    Book b1("C++", 100);
-   Book b2("Python",120);
+   Book b2("Python", 120);
    Book b3("Java", 130);
    Book b4(b1);
 
-   list<Book>l;
+   list<Book> l;
    l.push_back(b1);
    l.push_back(b2);
    l.push_back(b3);
@@ -64,13 +69,16 @@ int main() {
    Book key("C++", 110);
 
    bookToCompare cmp;
-   if(cmp(b1, key)) {
-      cout<<"Same books\n";
+   if (cmp(b1, key))
+   {
+      cout << "Same books\n";
    }
 
    auto it = search(l.begin(), l.end(), key, cmp);
-   if(it != l.end()){
-      cout<<"Found";
-   } else cout<<"Not Found";
-
+   if (it != l.end())
+   {
+      cout << "Found";
+   }
+   else
+      cout << "Not Found";
 }

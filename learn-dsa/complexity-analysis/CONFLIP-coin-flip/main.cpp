@@ -7,28 +7,23 @@ int32_t main()
 {
     ll test_cases;
     cin >> test_cases;
-    while (test_cases > 0)
+    while (test_cases--)
     {
-        ll k, d0, d1;
-        cin >> k >> d0 >> d1;
+        int cnt_game; 
+        cin>>cnt_game;
 
-        ll num = d0 + d1;
+        while(cnt_game--) {
+            int i, n, q; 
+            cin>>i>>n>>q;
 
-        num += (k - 2) * ((d0 + d1) % 10);
+            if(i==q) {
+                cout<<n/2<<endl;
+            }
+            else{
+                if(n%2 != 0) cout<<(n/2)+1<<endl;
+                else cout<<n/2<<endl;
+            } 
 
-        // for (ll i = k - 3; i >= 0; i--)
-        // {
-        //     d0 += (d0 % 10);
-        // }
-
-        if (num % 3 == 0)
-        {
-            cout << "YES" << endl;
         }
-        else
-        {
-            cout << "NO" << endl;
-        }
-        test_cases--;
     }
 }

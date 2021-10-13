@@ -2,6 +2,8 @@
     "files.associations": {
         "*.rmd": "markdown",
         "ratio": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "string.h": "c",
+        "ostream": "cpp"
     }
 }

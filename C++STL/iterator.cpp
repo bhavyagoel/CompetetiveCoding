@@ -1,17 +1,19 @@
 #include <iostream>
-#include<list> 
-using namespace std; 
-
+#include <list>
+using namespace std;
 
 /*
 * Templates + interators
 ? Iterator - freedom from container type
 */
-template<class ForwardIterator, class T>
-ForwardIterator search(ForwardIterator start, ForwardIterator end, T key){
+template <class ForwardIterator, class T>
+ForwardIterator search(ForwardIterator start, ForwardIterator end, T key)
+{
 
-    while(start!= end) {
-        if(*start==key){
+    while (start != end)
+    {
+        if (*start == key)
+        {
             return start;
         }
         start++;
@@ -19,9 +21,9 @@ ForwardIterator search(ForwardIterator start, ForwardIterator end, T key){
     return end;
 }
 
-
-int main() {
-    list<int> l; 
+int main()
+{
+    list<int> l;
     l.push_back(1);
     l.push_back(2);
     l.push_back(4);
@@ -30,7 +32,10 @@ int main() {
     l.push_back(8);
 
     auto it = search(l.begin(), l.end(), 5);
-    if(it==l.end()){
-        cout<<"ELement not present"<<endl;
-    }else cout<<*it<<endl;
+    if (it == l.end())
+    {
+        cout << "ELement not present" << endl;
+    }
+    else
+        cout << *it << endl;
 }
